@@ -1,5 +1,5 @@
 // ============================================================
-// FastFox - Firefox user.js
+// AirFox - Firefox user.js
 // Telemetry off, no sponsored junk, lighter and faster
 // Put this file in your profile folder (about:profiles -> Root Folder)
 // and restart Firefox.
@@ -86,3 +86,10 @@ user_pref("ui.prefersReducedMotion", 1);
 
 // Block video autoplay
 user_pref("media.autoplay.default", 5);
+cd ~/Projects/airfox
+cat >> user.js << 'EOF'
+
+// ===== CUSTOM CSS =====
+// Enables chrome/userChrome.css
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+EOF
