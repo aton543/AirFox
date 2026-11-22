@@ -1,0 +1,45 @@
+/* ============================================================
+   FastFox - userChrome.css
+   Removes clutter, makes the UI compact.
+   If something breaks after a Firefox update, comment out the
+   related block with /* ... */ and report it in Issues.
+   ============================================================ */
+
+/* ===== Useless buttons ===== */
+#pocket-button,
+#firefox-view-button,
+#alltabs-button,
+#fxa-toolbar-menu-button,
+#nav-bar-overflow-button {
+  display: none !important;
+}
+
+/* ===== Empty spacers ===== */
+toolbarspring,
+#customizableui-special-spring1,
+#customizableui-special-spring2 {
+  display: none !important;
+}
+
+/* ===== Compact tabs and toolbar ===== */
+:root {
+  --tab-min-height: 30px !important;
+  --toolbarbutton-inner-padding: 6px !important;
+  --urlbar-min-height: 30px !important;
+}
+
+/* ===== Hide tab close button on inactive tabs (middle-click closes) ===== */
+.tabbrowser-tab:not([selected]) .tab-close-button {
+  display: none !important;
+}
+
+/* ===== Clean new tab page ===== */
+@-moz-document url("about:newtab"), url("about:home") {
+  .logo-and-wordmark,
+  .weatherCard,
+  .context-menu-button,
+  .section-top-bar,
+  .discovery-stream-section-title {
+    display: none !important;
+  }
+}
