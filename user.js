@@ -1,4 +1,11 @@
-// ===== ТЕЛЕМЕТРІЯ =====
+// ============================================================
+// FastFox - Firefox user.js
+// Telemetry off, no sponsored junk, lighter and faster
+// Put this file in your profile folder (about:profiles -> Root Folder)
+// and restart Firefox.
+// ============================================================
+
+// ===== TELEMETRY & DATA COLLECTION =====
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("toolkit.telemetry.enabled", false);
@@ -24,7 +31,7 @@ user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("browser.discovery.enabled", false);
 
-// ===== СМІТТЯ / СПОНСОРИ / POCKET =====
+// ===== JUNK: SPONSORS, POCKET, RECOMMENDATIONS =====
 user_pref("extensions.pocket.enabled", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
@@ -35,38 +42,47 @@ user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
 user_pref("browser.preferences.moreFromMozilla", false);
 user_pref("browser.aboutwelcome.enabled", false);
 
-// ===== ШВИДКІСТЬ / ЛЕГКІСТЬ ПІД ІГРИ =====
-// менше процесів = менше RAM
+// ===== PERFORMANCE: LOW RESOURCE USAGE (GOOD FOR GAMING) =====
+
+// Fewer content processes = less RAM
 user_pref("dom.ipc.processCount", 4);
 user_pref("dom.ipc.processPrelaunch.enabled", false);
 user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
-// кеш: у RAM не треба, диск (SSD) тримаємо увімкненим
+
+// Cache: keep disk cache on (SSD), limit memory cache
 user_pref("browser.cache.disk.enable", true);
 user_pref("browser.cache.disk.capacity", 524288);
 user_pref("browser.cache.memory.capacity", 131072);
-// вигрузка неактивних вкладок при нестачі RAM
+
+// Unload inactive tabs when RAM is low
 user_pref("browser.tabs.unloadOnLowMemory", true);
 user_pref("browser.low_commit_space_threshold_mb", 3276);
-// мережа
+
+// Network
 user_pref("network.http.max-connections", 1800);
 user_pref("network.http.max-persistent-connections-per-server", 10);
 user_pref("network.dnsCacheEntries", 10000);
 user_pref("network.dnsCacheExpiration", 3600);
-// не качати наперед те, що ти не відкривав
+
+// Don't prefetch pages you haven't opened
 user_pref("network.prefetch-next", false);
 user_pref("network.predictor.enabled", false);
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
-// GPU-прискорення (на 1650 ок)
+
+// GPU acceleration (VA-API line is Linux only, ignored on Windows)
 user_pref("gfx.webrender.all", true);
 user_pref("layers.acceleration.force-enabled", true);
 user_pref("media.ffmpeg.vaapi.enabled", true);
-// менше записів на диск
+
+// Fewer disk writes
 user_pref("browser.sessionstore.interval", 60000);
-// анімації/плюшки, що їдять ресурси
+
+// Disable resource-hungry animations
 user_pref("browser.download.animateNotifications", false);
 user_pref("general.smoothScroll", false);
 user_pref("browser.tabs.animate", false);
 user_pref("ui.prefersReducedMotion", 1);
-// відео не автоплеїться у фоні
+
+// Block video autoplay
 user_pref("media.autoplay.default", 5);
