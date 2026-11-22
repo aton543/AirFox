@@ -1,4 +1,4 @@
-# FastFox
+# AirFox
 
 My Firefox config. I made it because I wanted Firefox to stop sending data to Mozilla and stop eating RAM while I game. It turns off telemetry, kills the sponsored stuff and Pocket, and makes the browser a bit lighter.
 
