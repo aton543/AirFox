@@ -53,6 +53,8 @@ your-profile/
 To check that it works, open `about:config` and search for `toolkit.telemetry.enabled`. It should say `false`.
 
 ## How to make your browser even better
+<img width="1920" height="1079" alt="зображення" src="https://github.com/user-attachments/assets/21c7ec54-b1ec-469f-a94b-05aab3abc01b" />
+
 
 1. Install AirFox using the instructions above.
 2. Add only these three extensions:
