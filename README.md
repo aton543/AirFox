@@ -19,11 +19,12 @@ A regular CSS file, but for the Firefox interface (tabs, toolbar, buttons) inste
 
 It's nothing special. It only changes how Firefox looks, not how it works. If you only care about privacy and speed, skip it and use just `user.js`.
 **Before**
-![before]![Uploading зображення.png…]()
+!<img width="1920" height="1038" alt="зображення" src="https://github.com/user-attachments/assets/aebad9d3-cc89-4850-b921-03d89f068b54" />
+
 
 
 **After**
-![after]<img width="1920" height="1038" alt="зображення" src="https://github.com/user-attachments/assets/fc7b98b4-dd9b-486d-aaf4-69b2ea78baa6" />
+!<img width="1920" height="1038" alt="зображення" src="https://github.com/user-attachments/assets/fc7b98b4-dd9b-486d-aaf4-69b2ea78baa6" />
 
 
 ## How to install
