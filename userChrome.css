@@ -1,11 +1,13 @@
-/* ============================================================
-   AirFox - userChrome.css
-   Removes clutter, makes the UI compact.
-   If something breaks after a Firefox update, comment out the
-   related block with /* ... */ and report it in Issues.
-   ============================================================ */
+/* AirFox - userChrome.css
+   Each block is independent: if you don't like one, delete or comment it out. */
 
-/* ===== Useless buttons ===== */
+/* ===== Hide extension icons (reach them via keyboard shortcuts) ===== */
+#nav-bar .webextension-browser-action,
+#unified-extensions-button {
+  display: none !important;
+}
+
+/* ===== Hide useless buttons ===== */
 #pocket-button,
 #firefox-view-button,
 #alltabs-button,
@@ -14,32 +16,27 @@
   display: none !important;
 }
 
-/* ===== Empty spacers ===== */
+/* ===== Hide empty spacers ===== */
 toolbarspring,
 #customizableui-special-spring1,
 #customizableui-special-spring2 {
   display: none !important;
 }
 
-/* ===== Compact tabs and toolbar ===== */
+/* ===== Compact UI ===== */
 :root {
-  --tab-min-height: 30px !important;
+  --tab-min-height: 28px !important;
+  --urlbar-min-height: 28px !important;
   --toolbarbutton-inner-padding: 6px !important;
-  --urlbar-min-height: 30px !important;
 }
 
-/* ===== Hide tab close button on inactive tabs (middle-click closes) ===== */
+/* ===== Smaller, centered address bar ===== */
+#urlbar-container {
+  max-width: 600px !important;
+  margin-inline: auto !important;
+}
+
+/* ===== No close button on inactive tabs (middle-click closes) ===== */
 .tabbrowser-tab:not([selected]) .tab-close-button {
   display: none !important;
-}
-
-/* ===== Clean new tab page ===== */
-@-moz-document url("about:newtab"), url("about:home") {
-  .logo-and-wordmark,
-  .weatherCard,
-  .context-menu-button,
-  .section-top-bar,
-  .discovery-stream-section-title {
-    display: none !important;
-  }
 }
